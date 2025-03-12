@@ -7,7 +7,7 @@ export default function Footer() {
                     <a href="#top">Sifat.</a>
             </div>
 
-            <div id="warn" className="flex justify-between items-center w-full text-gray-500 text-sm mt-5">
+            <div id="warn" className="flex md:flex-row flex-col gap-5 justify-between items-center w-full text-gray-500 text-sm mt-5">
                 <div>Copyright©2025 by Sifat</div>
                 <div id="social" className="flex justify-between items-center gap-5">
                     <a href="https://www.facebook.com/sifat.3934" target="_blank">
