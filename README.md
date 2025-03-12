@@ -1,6 +1,6 @@
 # Sifat's Portfolio Website
 
-Welcome to the repository for my personal portfolio website. This project showcases my skills and projects as a web developer and ethical hacker.
+Welcome to the repository for my personal portfolio website. This project showcases my skills and certifications as a web developer and ethical hacker.
 
 ## Table of Contents
 - [About](#about)
@@ -44,7 +44,7 @@ This project is licensed under the **No License**. All rights are reserved, and 
 ## Contact
 
 For any inquiries, please contact me at:
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+- Email: [sifat@gmail.com](mailto:sifatsarkar3934@gmail.com)
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/sifat_3934)
 
 Thank you for visiting my portfolio website repository!
