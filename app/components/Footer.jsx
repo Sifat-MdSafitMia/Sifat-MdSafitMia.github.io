@@ -8,7 +8,7 @@ export default function Footer() {
             </div>
 
             <div id="warn" className="flex md:flex-row flex-col gap-5 justify-between items-center w-full text-gray-500 text-sm mt-5">
-                <div>Copyright©2025 by Sifat</div>
+                <div className="select-none"><a href="/about#terms">Copyright©2025 by Sifat</a></div>
                 <div id="social" className="flex justify-between items-center gap-5">
                     <a href="https://www.facebook.com/sifat.3934" target="_blank">
 <Image src='/facebook.svg' className="rounded-sm duration-300 hover:border-b-1 border-gray-700" alt="Facebook" width={25} height={25}/>

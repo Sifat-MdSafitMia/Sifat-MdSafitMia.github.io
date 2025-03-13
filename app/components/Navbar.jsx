@@ -23,16 +23,17 @@ export default function Navbar() {
 
     return (
         <div>
-            <div id="desktop" className={`backdrop-blur-lg z-40 fixed top-0 right-0 w-full flex justify-between items-center drop-shadow-lg text-white px-10 py-5 ${isScroll ? 'shadow-4xl' : 'bg-transparent'} transition duration-500`}>
+            <div id="desktop" className={`backdrop-blur-lg z-40 fixed top-0 right-0 w-full flex justify-between items-center drop-shadow-lg text-gray-800 px-10 py-5 ${isScroll ? 'shadow-4xl' : 'bg-transparent'} transition duration-500`}>
                 <div id="logo" className="text-4xl font-bold cursor-pointer select-none">
                     <a href="#top">Sifat.</a>
                 </div>
 
                 <ul className="hidden gap-2 items-center select-none md:flex">
-                    <li><Link className="text-sm px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/">Home</Link></li>
-                    <li><Link className="text-sm px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/certifications">Certifications</Link></li>
-                    <li><Link className="text-sm px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/contact">Contact</Link></li>
-                    <li><Link className="text-sm px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/about">About</Link></li>
+                    <li><Link className="hover:text-white text-sm px-1 lg:px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/">Home</Link></li>
+                    <li><Link className="hover:text-white text-sm px-1 lg:px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/certifications">Certifications</Link></li>
+                    <li><Link className="hover:text-white text-sm px-1 lg:px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/achievements">Achievements</Link></li>
+                    <li><Link className="hover:text-white text-sm px-1 lg:px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/contact">Contact</Link></li>
+                    <li><Link className="hover:text-white text-sm px-1 lg:px-5 py-3 duration-500 hover:border-b-2 border-gray-700 hover:bg-gray-500 rounded-sm" href="/about">About</Link></li>
                 </ul>
 
                 
@@ -63,6 +64,7 @@ export default function Navbar() {
 </svg>
                     <li className="text-sm text-white/90 border-b-1 border-gray-400/50" onClick={closeMenu}><Link href="/">Home</Link></li>
                     <li className="text-sm text-white/90 border-b-1 border-gray-400/50" onClick={closeMenu}><Link href="/certifications">Certifications</Link></li>
+                    <li className="text-sm text-white/90 border-b-1 border-gray-400/50" onClick={closeMenu}><Link href="/achievements">Achievements</Link></li>
                     <li className="text-sm text-white/90 border-b-1 border-gray-400/50" onClick={closeMenu}><Link href="/contact">Contact</Link></li>
                     <li className="text-sm text-white/90 border-b-1 border-gray-400/50" onClick={closeMenu}><Link href="/about">About</Link></li>
                 </ul>

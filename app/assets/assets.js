@@ -6,6 +6,8 @@ import problem_solving_basic from './problem_solving_basic.jpg';
 import problem_solving_intermediate from './problem_solving_intermediate.jpg';
 import python_basic from './python_basic.jpg';
 import sifat from './Sifat.jpg';
+import sifat1 from './sifat1.jpg';
+import sifatsarkar from './sifatsarkar.jpg';
 
 
 export const assets = {
@@ -17,7 +19,47 @@ export const assets = {
     problem_solving_intermediate,
     python_basic,
     sifat,
+    sifat1,
+    sifatsarkar,
 }
+
+export const certData = [
+    {
+        name: "Verify",
+        img: css,
+        link: "https://www.hackerrank.com/certificates/iframe/c589aa737abc"
+    },
+    {
+        name: "Verify",
+        img: frontend_developer,
+        link: "https://www.hackerrank.com/certificates/iframe/e24e476ca94b"
+    },
+    {
+        name: "Verify",
+        img: javascript_basic,
+        link: "https://www.hackerrank.com/certificates/iframe/b180cc47d214"
+    },
+    {
+        name: "Verify",
+        img: javascript_intermediate,
+        link: "https://www.hackerrank.com/certificates/iframe/7bc03e97f80c"
+    },
+    {
+        name: "Verify",
+        img: problem_solving_basic,
+        link: "https://www.hackerrank.com/certificates/iframe/4fefb70614ec"
+    },
+    {
+        name: "Verify",
+        img: problem_solving_intermediate,
+        link: "https://www.hackerrank.com/certificates/iframe/1f80a1289586"
+    },
+    {
+        name: "Verify",
+        img: python_basic,
+        link: "https://www.hackerrank.com/certificates/iframe/9413356367fa"
+    },
+]
 
 export const toolsData = [
         {
