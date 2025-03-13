@@ -1,8 +1,9 @@
 'use client'
 import Link from "next/link";
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 
 export default function Navbar() {
+    const [isScroll, setIsScroll] = useState(false);
     const sideMenuRef = useRef()
     const openMenu = ()=>{
         sideMenuRef.current.style.transform = 'translateX(-16rem)'
@@ -10,11 +11,20 @@ export default function Navbar() {
     const closeMenu = ()=>{
         sideMenuRef.current.style.transform = 'translateX(16rem)'
     }
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            if(scrollY > 50){
+                setIsScroll(true)
+            }else{
+                setIsScroll(false)
+            }
+        })
+    },[])
 
     return (
         <div>
-            <div id="desktop" className="flex justify-between items-center drop-shadow-lg text-white px-10 py-5">
-                <div id="logo" className="text-4xl font-bold text-gray-800 cursor-pointer select-none">
+            <div id="desktop" className={`backdrop-blur-lg z-40 fixed top-0 right-0 w-full flex justify-between items-center drop-shadow-lg text-white px-10 py-5 ${isScroll ? 'shadow-4xl' : 'bg-transparent'} transition duration-500`}>
+                <div id="logo" className="text-4xl font-bold cursor-pointer select-none">
                     <a href="#top">Sifat.</a>
                 </div>
 
