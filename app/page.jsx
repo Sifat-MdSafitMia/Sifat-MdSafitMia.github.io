@@ -2,6 +2,7 @@ import Image from "next/image";
 import { assets } from "./assets/assets";
 import TypewriterEffect from "./components/Typewriter";
 import CertSlider from "./components/CertSlider";
+import AchievSlider from "./components/AchievClider";
 
 
 export default function Home() {
@@ -18,12 +19,14 @@ export default function Home() {
 
       <div id="certifications" className="mt-10 border-b-2 border-red-400 w-full self-start">
         <h1 className="text-2xl font-black bg-red-500 text-gray-300 py-3 px-5 rounded-t-2xl inline-block">Certifications</h1>
-        <CertSlider/>
+        
       </div>
+      <CertSlider/>
 
       <div id="certifications" className="mt-10 border-b-2 border-red-400 w-full self-start">
         <h1 className="text-2xl font-black bg-red-500 text-gray-300 py-3 px-5 rounded-t-2xl inline-block">Achievments</h1>
       </div>
+      <AchievSlider/>
     </div>
   );
 }

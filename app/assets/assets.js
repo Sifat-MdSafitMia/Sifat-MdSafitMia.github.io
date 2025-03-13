@@ -8,6 +8,9 @@ import python_basic from './python_basic.jpg';
 import sifat from './Sifat.jpg';
 import sifat1 from './sifat1.jpg';
 import sifatsarkar from './sifatsarkar.jpg';
+import hashes from './hashes.png';
+import linux from './linux.png';
+import security from './security.png';
 
 
 export const assets = {
@@ -21,8 +24,16 @@ export const assets = {
     sifat,
     sifat1,
     sifatsarkar,
+    hashes,
+    security,
+    linux,
 }
 
+export const achievementsData = [
+    {name: "Verify", img: hashes, link: "https://tryhackme.com/Sifat./badges/hash-cracker?fbclid=IwY2xjawI_zWZleHRuA2FlbQIxMQABHWHPg70ZIENOmfsLtLXunw9ckXQsmecVOFqibXtRZSJTygCvdUL7ks7EXg_aem_9MAZeohr6aYQBsfhRO6X0g"},
+    {name: "Verify", img: security, link: "https://tryhackme.com/Sifat./badges/security-awareness?fbclid=IwY2xjawI_zkdleHRuA2FlbQIxMQABHb_-dXzzEzzRYnXyRbBdlXR3JzSWuNcZCS5AbJkwcidi2lnVuIHy6rK9hg_aem_nFB-w7JZmxUByRQy1PE0tw"},
+    {name: "Verify", img: linux, link: "https://tryhackme.com/Sifat./badges/terminaled?fbclid=IwY2xjawI_z2pleHRuA2FlbQIxMQABHcJ-I_xLItE3UHDUkK8kG2RwrIBlEG-8UGUyA-_ie2xFwQ1MPfqNoflOdw_aem_p3cJMRs8_5Lc9pkFuT0MAw"},
+    ]
 export const certData = [
     {
         name: "Verify",

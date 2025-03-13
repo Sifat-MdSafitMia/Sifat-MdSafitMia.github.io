@@ -10,13 +10,13 @@ export default function About() {
     setShowIframe(!showIframe);
     };
     return (
-        <div className="flex flex-col items-center py-10 mt-30 px-10">
+        <div className="flex flex-col items-center py-10 mt-30 px-2 md:px-10">
             <div id="who" className="flex md:flex-row flex-col items-center justify-center md:justify-center md:mx-15">
                 <div id="image" className="w-[50%] drop-shadow-2xl md:border-r-[.5px] border-b-[.5px] md:border-b-0 md:border-black/80 flex items-center justify-center">
                 <Image src={assets.sifat} alt="Sifat" width={200} height={200} className="rounded-xl m-5"/>
                 </div>
-                <div id="about" className="w-[50%] text-center p-5">
-                <h1 className="text-gray-600 font-bold text-3xl p-5">Who am I?</h1>
+                <div id="about" className="w-[50%] text-center p-2 md:p-5">
+                <h1 className="text-gray-600 font-bold text-3xl p-0 md:p-5">Who am I?</h1>
                 <p>
                     Hi, I'm Md Safit Mia, known as Sifat, a passionate cybersecurity specialist with a knack for uncovering vulnerabilities as a bug hunter. I thrive in the world of Capture The Flag (CTF) competitions and enjoy the challenges they bring. Additionally, I am a skilled web developer, constantly honing my craft to build secure and efficient web applications.
                 </p>

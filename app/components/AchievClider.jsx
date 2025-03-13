@@ -10,16 +10,12 @@ import Image from "next/image";
 import { assets } from "../assets/assets"; // Ensure correct import
 
 const images = [
-  assets.css,
-  assets.frontend_developer,
-  assets.javascript_basic,
-  assets.javascript_intermediate,
-  assets.problem_solving_basic,
-  assets.problem_solving_intermediate,
-  assets.python_basic,
+    assets.hashes,
+    assets.security,
+    assets.linux,
 ];
 
-export default function CertSlider() {
+export default function AchievSlider() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-600 rounded-lg py-5 my-5 ">
       {/* Swiper Container */}
@@ -57,8 +53,8 @@ export default function CertSlider() {
               <Image
                 src={image}
                 alt="Certification"
-                width={80}
-                height={80}
+                width={150}
+                height={150}
                 className="rounded-2xl w-full h-full object-cover"
                 quality={100} // Ensure high-quality images
                 priority={index < 3} // Prioritize loading the first few images
