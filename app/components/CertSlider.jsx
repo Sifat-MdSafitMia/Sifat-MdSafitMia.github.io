@@ -21,7 +21,7 @@ const images = [
 
 export default function CertSlider() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-600 rounded-lg py-5 my-5 ">
+    <div className="flex flex-col items-center justify-center bg-gray-600 rounded-lg px-5 py-5 my-5 ">
       {/* Swiper Container */}
       <div className="w-full md:w-3/4 p-2 md:p-5 m-5 md:m-8 rounded-2xl shadow-lg bg-gray-500">
         <Swiper
