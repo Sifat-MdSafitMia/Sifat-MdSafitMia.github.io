@@ -11,6 +11,7 @@ import sifatsarkar from './sifatsarkar.jpg';
 import hashes from './hashes.png';
 import linux from './linux.png';
 import security from './security.png';
+import getin from './getin.gif';
 
 
 export const assets = {
@@ -27,6 +28,7 @@ export const assets = {
     hashes,
     security,
     linux,
+    getin,
 }
 
 export const achievementsData = [

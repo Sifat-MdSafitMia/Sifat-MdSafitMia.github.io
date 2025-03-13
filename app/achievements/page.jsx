@@ -1,17 +1,12 @@
-"use stict";
-"use client";
+
 import Image from "next/image";
 import { achievementsData } from "../assets/assets";
-import { motion } from "framer-motion";
 
 export default function Achievments() {
     return (
         <div className="mt-30 mb-30 px-3 md:px-10 py-5 w-full flex flex-col items-center justify-center">
-            <motion.h1 
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="sm:text-sm text-[9px] font-semibold text-gray-800 px-3">Here you can see all the achievments.</motion.h1>
+            <h1 
+            className="sm:text-sm text-[9px] font-semibold text-gray-800 px-3">Here you can see all the achievments.</h1>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3 justify-center items-center mt-10">
     {achievementsData.map(({ name, img, link }, index) => (
         <div
