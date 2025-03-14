@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /certifications
+Allow: /achievments
+Allow: /contact
+Disallow: /robots.txt
+Disallow: /sitemap.xml
+
+Sitemap: https://sifat-mdsafitmia.github.io/sitemap.xml
