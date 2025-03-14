@@ -53,6 +53,15 @@ export const metadata = {
     'hire a web developer',
     'hire a security analyst',
     'hire a security researcher',
+    "sifat sarkar safit",
+    "Sifat sarkar",
+    'md safit mia',
+    'mdsafitmia',
+    'sifat github',
+    'safit github',
+    'safit mia github',
+    'sifat sarkar github',
+    'ethical hacker',
     'Sifat',
     'sifatsarkar',
     'sifat sarkar',
@@ -73,6 +82,7 @@ export const metadata = {
     'safit',
     'Cybersecurity Specialist Portfolio',
   ],
+  author: "Sifat Sarkar",
 };
 
 export default function RootLayout({ children }) {

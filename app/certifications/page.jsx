@@ -5,7 +5,7 @@ import { certData } from "../assets/assets";
 export default function Certifications() {
     return (
         <div className="mt-30 mb-30 px-3 md:px-10 py-5 w-full flex flex-col items-center justify-center">
-            <h1 className="sm:text-sm text-[9px] font-semibold text-gray-800 px-3">Here you can see all the certificate that I achieved.</h1>
+            <h1 className="sm:text-sm font-semibold text-gray-800 px-3">Here you can see all the certificate that I achieved.</h1>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3 justify-center items-center mt-10">
     {certData.map(({ name, img, link }, index) => (
         <div
