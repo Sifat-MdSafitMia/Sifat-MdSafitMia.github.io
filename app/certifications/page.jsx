@@ -10,7 +10,7 @@ export default function Certifications() {
     {certData.map(({ name, img, link }, index) => (
         <div
             key={index}
-            className="relative flex flex-col pt-2 px-2 bg-gray-400 hover:bg-gray-800 duration-700 drop-shadow-2xl rounded-3xl border-[.5px] items-center justify-center text-gray-700 hover:text-amber-100 hover:-translate-y-1.5 hover:scale-125 z-10 hover:z-20 hover:px-5"
+            className="relative flex flex-col pt-2 px-2 bg-gray-400 hover:bg-gray-800 duration-700 drop-shadow-2xl rounded-3xl border-[.5px] items-center justify-center text-gray-700 hover:text-amber-100 hover:-translate-y-1.5 hover:scale-125 z-10 hover:z-20"
         >
             <Image
                 src={img}
