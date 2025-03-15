@@ -11,7 +11,7 @@ export default function Achievments() {
     {achievementsData.map(({ name, img, link }, index) => (
         <div
             key={index}
-            className="relative flex items-center justify-center hover:-translate-y-1.5 hover:scale-125 duration-500 z-10 hover:z-20" // Add hover:z-20
+            className="relative flex flex-col  hover:px-5 pt-2 px-2 bg-gray-400 hover:bg-gray-800 duration-700 drop-shadow-2xl rounded-3xl border-[.5px] items-center justify-center text-gray-700 hover:text-amber-100 hover:-translate-y-1.5 hover:scale-125 z-10 hover:z-20" // Add hover:z-20
         >
             <Image
                 src={img}
@@ -20,13 +20,17 @@ export default function Achievments() {
                 height={300}
                 className="rounded-2xl border-2 border-gray-500 drop-shadow-lg"
             />
+
+            <h2 className="text-lg font-semibold">
+                {name}
+            </h2>
             <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-700 bg-gray-600 px-2 border-[.5px] rounded-3xl hover:bg-gray-500/50 duration-500 z-50 absolute bottom-1 text-sm font-semibold"
+                className="my-2 px-5 bg-amber-900 text-amber-100 hover:bg-amber-500 hover:text-amber-800 duration-300 rounded-2xl py-1 "
             >
-                {name}
+                Verify
             </a>
         </div>
     ))}

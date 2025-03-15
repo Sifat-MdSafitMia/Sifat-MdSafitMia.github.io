@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Head from "next/head";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -88,6 +89,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      <Head>
+      <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XJ882KCPWK"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XJ882KCPWK');
+          `}
+        </script>
+      </Head>
       <body className={`${poppins.variable} antialiased text-center`}>
         <Navbar />
         {children}
