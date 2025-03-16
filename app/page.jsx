@@ -17,7 +17,7 @@ export default function Home() {
       <TypewriterEffect />
 
       <div id="button" className="flex md:flex-row flex-col items-center gap-5 justify-between mt-5">
-      <div className="font-semibold text-md w-30 flex items-center justify-center py-3 px-5 text-white hover:text-gray-700 hover:bg-transparent duration-500 bg-gray-700 rounded-3xl border-[.5px] hover:border-gray-700 border-amber-200"><Link href='/contact' className="">Contact</Link></div>
+      <div className="font-semibold text-md w-30 flex items-center justify-center py-3 px-5 text-white hover:text-gray-700 hover:bg-transparent duration-500 bg-gray-700 rounded-3xl border-[.5px] hover:border-gray-700 border-amber-200"><Link href='/projects' className="">Projects</Link></div>
 
         <div className="font-semibold w-30 text-md py-3 px-5 hover:bg-gray-700 duration-500 rounded-3xl border-[.5px] hover:border-amber-200 border-gray-700 hover:text-white text-gray-700"><Link className="flex gap-2 items-center" href='/resume-sifat.pdf'>Resume 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">

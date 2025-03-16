@@ -42,7 +42,7 @@ export default function Navbar() {
                 } transition-transform duration-500`}
             >
                 <div id="logo" className="text-4xl font-bold cursor-pointer select-none">
-                    <a href="#top">Sifat.</a>
+                    <a href="/">Sifat.</a>
                 </div>
 
                 <ul className="hidden gap-2 items-center select-none md:flex">

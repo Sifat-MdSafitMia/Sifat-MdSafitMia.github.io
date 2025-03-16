@@ -12,10 +12,13 @@ import security from './security.png';
 import getin from './getin.gif';
 import pre_assesment from './pre-assesment.jpg';
 import sql_injection from "./sql-injection.png"
-
+import project from "./project.jpg"
+import frontend_project from "./frontend_project.png"
 
 
 export const assets = {
+    frontend_project,
+    project,
     pre_assesment,
     sql_injection,
     css,
@@ -31,6 +34,16 @@ export const assets = {
     linux,
     getin,
 }
+
+export const porjectData =[
+    {name: "Responsive Portfolio Design (Fronted)", link: "https://sifat-sarkar.vercel.app", img: frontend_project},
+    {name: "Python Auto Message Send", link: "https://github.com/sifat-8208/PyAutoMSG", img: ""},
+    {name: "Python Number Guess Game", link: "https://github.com/sifat-8208/PyNumGuess", img: ""},
+    {name: "Python Currency Converter", link: "https://github.com/sifat-8208/CurrencyConvert", img: ""},
+    {name: "Python Image Downloader", link: "https://github.com/sifat-8208/PyImageDownloader", img: ""},
+    {name: "Rock, Paper, Scisser Game (Python)", link: "https://github.com/sifat-8208/RockPaper", img: ""},
+    {name: "Python Video Downloader", link: "https://github.com/sifat-8208/VideoDownloader", img: ""},
+]
 
 export const achievementsData = [
     {name: "Hash Cracker", img: hashes, link: "https://tryhackme.com/Sifat./badges/hash-cracker?fbclid=IwY2xjawI_zWZleHRuA2FlbQIxMQABHWHPg70ZIENOmfsLtLXunw9ckXQsmecVOFqibXtRZSJTygCvdUL7ks7EXg_aem_9MAZeohr6aYQBsfhRO6X0g"},
