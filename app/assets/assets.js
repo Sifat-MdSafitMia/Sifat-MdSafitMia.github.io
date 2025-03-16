@@ -43,6 +43,8 @@ export const porjectData =[
     {name: "Python Image Downloader", link: "https://github.com/sifat-8208/PyImageDownloader", img: ""},
     {name: "Rock, Paper, Scisser Game (Python)", link: "https://github.com/sifat-8208/RockPaper", img: ""},
     {name: "Python Video Downloader", link: "https://github.com/sifat-8208/VideoDownloader", img: ""},
+    {name: "Python Snake Game", link: "https://github.com/sifat-8208/PySnakeGame", img: ""},
+    {name: "Python Digital Clock", link: "https://github.com/sifat-8208/PyDigitalClock", img: ""},
 ]
 
 export const achievementsData = [
