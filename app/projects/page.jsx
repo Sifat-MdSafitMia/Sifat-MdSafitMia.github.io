@@ -21,7 +21,6 @@ export default function Projects() {
             height={300}
             className="rounded-2xl border-2 border-gray-500 drop-shadow-lg"
             placeholder="blur" 
-            blurDataURL="/project.jpg"
             />  
 
             <h2 className="text-lg font-semibold">
