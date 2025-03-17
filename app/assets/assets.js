@@ -14,9 +14,19 @@ import pre_assesment from './pre-assesment.jpg';
 import sql_injection from "./sql-injection.png"
 import project from "./project.jpg"
 import frontend_project from "./frontend_project.png"
+import security_princples from "./cc-security-principles.jpg"
+import incident_response from "./cc-incident-response.jpg"
+import network_security from "./cc-network-security.jpg"
+import security_oprerations from "./cc-security-oparations.jpg"
+import access_control from "./cc-access-control-concepts.jpg"
 
 
 export const assets = {
+    access_control,
+    security_oprerations,
+    security_princples,
+    network_security,
+    incident_response,
     frontend_project,
     project,
     pre_assesment,
@@ -53,6 +63,31 @@ export const achievementsData = [
     {name: "Terminaled", img: linux, link: "https://tryhackme.com/Sifat./badges/terminaled?fbclid=IwY2xjawI_z2pleHRuA2FlbQIxMQABHcJ-I_xLItE3UHDUkK8kG2RwrIBlEG-8UGUyA-_ie2xFwQ1MPfqNoflOdw_aem_p3cJMRs8_5Lc9pkFuT0MAw"},
     ]
 export const certData = [
+    {
+        name: "Security Principles",
+        img: security_princples,
+        link: "https://isc2.obrizum.io/org/cc/certificate/f3af10a9-7e02-4b9a-a5d0-7390cc9f8920",
+    },
+    {
+        name: "Incident Response",
+        img: incident_response,
+        link: "https://isc2.obrizum.io/org/cc/certificate/29b364bb-d61f-47b2-aa9a-4204c61784a7",
+    },
+    {
+        name: "Access Control Concepts",
+        img: access_control,
+        link: "https://isc2.obrizum.io/org/cc/certificate/0bef9cc9-3b8e-46b6-b4e1-4107564c1d73",
+    },
+    {
+        name: "Network Security",
+        img: network_security,
+        link: "https://isc2.obrizum.io/org/cc/certificate/aba8308b-b683-4d11-ac81-8d1a3a162462",
+    },
+    {
+        name: "Security Operations",
+        img: security_oprerations,
+        link: "https://isc2.obrizum.io/org/cc/certificate/523af512-5041-4656-9e0b-8f28e463b44b",
+    },
     {
         name: "Pre Assement",
         img: pre_assesment,
