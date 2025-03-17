@@ -19,9 +19,11 @@ import incident_response from "./cc-incident-response.jpg"
 import network_security from "./cc-network-security.jpg"
 import security_oprerations from "./cc-security-oparations.jpg"
 import access_control from "./cc-access-control-concepts.jpg"
+import introduction_cip from "./intro-cip.png"
 
 
 export const assets = {
+    introduction_cip,
     access_control,
     security_oprerations,
     security_princples,
@@ -64,72 +66,77 @@ export const achievementsData = [
     ]
 export const certData = [
     {
-        name: "Security Principles",
+        name: "Introduction to CIP (OPSWAT)",
+        img: introduction_cip,
+        link: "https://learn.opswatacademy.com/certificate/ch-ONqy5-w",
+    },
+    {
+        name: "Security Principles (IS2)",
         img: security_princples,
         link: "https://isc2.obrizum.io/org/cc/certificate/f3af10a9-7e02-4b9a-a5d0-7390cc9f8920",
     },
     {
-        name: "Incident Response",
+        name: "Incident Response (IS2)",
         img: incident_response,
         link: "https://isc2.obrizum.io/org/cc/certificate/29b364bb-d61f-47b2-aa9a-4204c61784a7",
     },
     {
-        name: "Access Control Concepts",
+        name: "Access Control Concepts (IS2)",
         img: access_control,
         link: "https://isc2.obrizum.io/org/cc/certificate/0bef9cc9-3b8e-46b6-b4e1-4107564c1d73",
     },
     {
-        name: "Network Security",
+        name: "Network Security (IS2)",
         img: network_security,
         link: "https://isc2.obrizum.io/org/cc/certificate/aba8308b-b683-4d11-ac81-8d1a3a162462",
     },
     {
-        name: "Security Operations",
+        name: "Security Operations (IS2)",
         img: security_oprerations,
         link: "https://isc2.obrizum.io/org/cc/certificate/523af512-5041-4656-9e0b-8f28e463b44b",
     },
     {
-        name: "Pre Assement",
+        name: "Pre Assement (IS2)",
         img: pre_assesment,
         link: "https://isc2.obrizum.io/org/cc/certificate/e1b405cf-523c-483a-81a7-b1cc8c36094a",
     },
     {
-        name: "Sql Injection",
+        name: "Sql Injection (EC Council)",
         img: sql_injection,
         link: "https://codered.eccouncil.org/certificate/083a4305-2c60-46d8-b6c7-19cfaff73891",
     },
     {
-        name: "CSS",
+        name: "CSS (HackerRank)",
         img: css,
         link: "https://www.hackerrank.com/certificates/iframe/c589aa737abc"
     },
     {
-        name: "Frontend Developer (React)",
+        name: "Frontend Developer-React (HackerRank)",
         img: frontend_developer,
         link: "https://www.hackerrank.com/certificates/iframe/e24e476ca94b"
     },
     {
-        name: "Javascript Basic",
+        name: "Javascript Basic (HackerRank)",
         img: javascript_basic,
         link: "https://www.hackerrank.com/certificates/iframe/b180cc47d214"
     },
     {
-        name: "JavaScript Intermediate",
+        name: "JavaScript Intermediate (HackerRank)",
         img: javascript_intermediate,
         link: "https://www.hackerrank.com/certificates/iframe/7bc03e97f80c"
     },
     {
-        name: "Problen Solving Basic",
+        name: "Problen Solving Basic (HackerRank)",
         img: problem_solving_basic,
         link: "https://www.hackerrank.com/certificates/iframe/4fefb70614ec"
     },
     {
-        name: "Problem Solving Intermediate",
+        name: "Problem Solving Intermediate (HackerRank)",
         img: problem_solving_intermediate,
         link: "https://www.hackerrank.com/certificates/iframe/1f80a1289586"
     },
     {
-        name: "Python Basic",
+        name: "Python Basic (HackerRank)",
         img: python_basic,
         link: "https://www.hackerrank.com/certificates/iframe/9413356367fa"
     },
