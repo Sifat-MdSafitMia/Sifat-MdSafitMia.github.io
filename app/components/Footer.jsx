@@ -25,6 +25,9 @@ export default function Footer() {
                     <a href="#" target="_blank">
 <Image src='/linkedin.svg' className="rounded-sm duration-300 hover:border-b-1 border-gray-700" alt="Linkedin" width={25} height={25}/>
                     </a>
+                    <a href="https://medium.com/@sifatsarkar3934" target="_blank">
+<Image src='/medium.svg' className="rounded-sm duration-300 hover:border-b-1 border-gray-700" alt="Linkedin" width={25} height={25}/>
+                    </a>
                 </div>
             </div>
         </div>
