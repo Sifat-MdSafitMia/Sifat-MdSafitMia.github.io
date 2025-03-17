@@ -71,32 +71,32 @@ export const certData = [
         link: "https://learn.opswatacademy.com/certificate/ch-ONqy5-w",
     },
     {
-        name: "Security Principles (IS2)",
+        name: "Security Principles (ISC2)",
         img: security_princples,
         link: "https://isc2.obrizum.io/org/cc/certificate/f3af10a9-7e02-4b9a-a5d0-7390cc9f8920",
     },
     {
-        name: "Incident Response (IS2)",
+        name: "Incident Response (ISC2)",
         img: incident_response,
         link: "https://isc2.obrizum.io/org/cc/certificate/29b364bb-d61f-47b2-aa9a-4204c61784a7",
     },
     {
-        name: "Access Control Concepts (IS2)",
+        name: "Access Control Concepts (ISC2)",
         img: access_control,
         link: "https://isc2.obrizum.io/org/cc/certificate/0bef9cc9-3b8e-46b6-b4e1-4107564c1d73",
     },
     {
-        name: "Network Security (IS2)",
+        name: "Network Security (ISC2)",
         img: network_security,
         link: "https://isc2.obrizum.io/org/cc/certificate/aba8308b-b683-4d11-ac81-8d1a3a162462",
     },
     {
-        name: "Security Operations (IS2)",
+        name: "Security Operations (ISC2)",
         img: security_oprerations,
         link: "https://isc2.obrizum.io/org/cc/certificate/523af512-5041-4656-9e0b-8f28e463b44b",
     },
     {
-        name: "Pre Assement (IS2)",
+        name: "Pre Assement (ISC2)",
         img: pre_assesment,
         link: "https://isc2.obrizum.io/org/cc/certificate/e1b405cf-523c-483a-81a7-b1cc8c36094a",
     },
