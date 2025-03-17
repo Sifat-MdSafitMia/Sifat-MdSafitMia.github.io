@@ -14,12 +14,14 @@ export default function Achievments() {
             className="relative flex flex-col pt-2 bg-gray-400 hover:bg-gray-800 duration-700 drop-shadow-2xl rounded-3xl border-[.5px] items-center justify-center text-gray-700 hover:text-amber-100 hover:-translate-y-1.5 hover:scale-125 px-2 z-10 hover:z-20"
         >
             <Image
-                src={img}
-                alt={name}
-                width={300}
-                height={300}
-                className="rounded-2xl border-2 border-gray-500 drop-shadow-lg"
-            />
+            src={img}
+            alt={name}
+            width={300}
+            height={300}
+            className="rounded-2xl border-2 border-gray-500 drop-shadow-lg"
+            placeholder="blur" 
+            blurDataURL="/project.jpg"
+            />  
 
             <h2 className="text-lg font-semibold">
                 {name}
