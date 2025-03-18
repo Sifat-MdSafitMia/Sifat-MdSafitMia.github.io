@@ -17,6 +17,15 @@ const images = [
   assets.problem_solving_basic,
   assets.problem_solving_intermediate,
   assets.python_basic,
+  assets.incident_response,
+  assets.access_control,
+  assets.network_security,
+  assets.security_oprerations,
+  assets.security_princples,
+  assets.pre_assesment,
+  assets.sql_injection,
+  assets.introduction_cip,
+  
 ];
 
 export default function CertSlider() {
