@@ -20,9 +20,13 @@ import network_security from "./cc-network-security.jpg"
 import security_oprerations from "./cc-security-oparations.jpg"
 import access_control from "./cc-access-control-concepts.jpg"
 import introduction_cip from "./intro-cip.png"
+import www from "./www.png"
+import webbed from "./webbed.png"
 
 
 export const assets = {
+    www,
+    webbed,
     introduction_cip,
     access_control,
     security_oprerations,
@@ -63,6 +67,8 @@ export const achievementsData = [
     {name: "Hash Cracker", img: hashes, link: "https://tryhackme.com/Sifat./badges/hash-cracker?fbclid=IwY2xjawI_zWZleHRuA2FlbQIxMQABHWHPg70ZIENOmfsLtLXunw9ckXQsmecVOFqibXtRZSJTygCvdUL7ks7EXg_aem_9MAZeohr6aYQBsfhRO6X0g"},
     {name: "Security Awarness", img: security, link: "https://tryhackme.com/Sifat./badges/security-awareness?fbclid=IwY2xjawI_zkdleHRuA2FlbQIxMQABHb_-dXzzEzzRYnXyRbBdlXR3JzSWuNcZCS5AbJkwcidi2lnVuIHy6rK9hg_aem_nFB-w7JZmxUByRQy1PE0tw"},
     {name: "Terminaled", img: linux, link: "https://tryhackme.com/Sifat./badges/terminaled?fbclid=IwY2xjawI_z2pleHRuA2FlbQIxMQABHcJ-I_xLItE3UHDUkK8kG2RwrIBlEG-8UGUyA-_ie2xFwQ1MPfqNoflOdw_aem_p3cJMRs8_5Lc9pkFuT0MAw"},
+    {name: "Webbed", img: webbed, link: "https://tryhackme.com/Sifat./badges/web-fund?fbclid=IwY2xjawJLpP9leHRuA2FlbQIxMQABHUr5KkFpf1ynfz07eNlDmZFZMwi3aQ44BQKWo69mXjtpotuIV3s-YyrclQ_aem_Ou_q65ZrBF1dIhY3-gwicA"},
+    {name: "World Wide Web", img: www, link: "https://tryhackme.com/Sifat./badges/world-wide-web?fbclid=IwY2xjawJLpPdleHRuA2FlbQIxMQABHVLNWr0t2hwWuV88EFaJ_PFNcs7qWc_eILl2SiWE9ADVp6jDfdGZ8C-Qlg_aem_tL29GD8eTMVpmBgg_FzX0A"},
     ]
 export const certData = [
     {
