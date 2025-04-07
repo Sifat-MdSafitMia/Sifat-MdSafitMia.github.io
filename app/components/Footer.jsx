@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="flex flex-col justify-center items-center mx-10 my-5">
             <div id="logo" className="text-4xl font-bold text-gray-800 cursor-pointer select-none border-b-2 border-gray-700/70 w-full text-center pb-3">
             <Link
-  href="/"
+  href="#top"
   className="bg-gradient-to-r from-black via-green-700 to-gray-900 bg-clip-text text-transparent hover:from-green-800 hover:to-black transition-all duration-300 font-mono tracking-wider"
 >
   Sifat.
