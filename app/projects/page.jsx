@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { assets, porjectData } from "../assets/assets";
+import { projectsData } from "../assets/assets";
 import ImageLoader from "../components/ImageLoader";
 
 export default function Projects() {
@@ -18,7 +18,15 @@ export default function Projects() {
 
     const item = {
         hidden: { y: 20, opacity: 0 },
-        show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } }
+        show: { 
+            y: 0, 
+            opacity: 1, 
+            transition: { 
+                type: "spring", 
+                stiffness: 100,
+                damping: 10
+            } 
+        }
     };
 
     return (
@@ -29,9 +37,9 @@ export default function Projects() {
                 transition={{ duration: 0.5 }}
                 className="text-center mb-10"
             >
-                <h1 className="text-3xl font-bold text-gray-800 mb-2">My Projects</h1>
-                <p className="text-gray-600 max-w-2xl">
-                    A collection of projects I've worked on, showcasing my skills and experience.
+                <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">My Projects</h1>
+                <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
+                    A collection of projects showcasing my skills and expertise.
                 </p>
             </motion.div>
 
@@ -41,32 +49,58 @@ export default function Projects() {
                 animate="show"
                 className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center items-stretch"
             >
-                {porjectData.map(({ name, img, link }, index) => (
+                {projectsData.map(({ name, img, link }, index) => (
                     <motion.div
                         key={index}
                         variants={item}
                         whileHover={{ 
                             y: -10,
-                            transition: { duration: 0.3 }
+                            scale: 1.02,
+                            transition: { 
+                                duration: 0.3,
+                                type: "spring",
+                                stiffness: 300
+                            }
                         }}
-                        className="relative flex flex-col h-full bg-white dark:bg-gray-700 shadow-lg hover:shadow-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-600 transition-all duration-300"
+                        className="relative flex flex-col h-full bg-white dark:bg-gray-700 shadow-lg hover:shadow-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-600 transition-all duration-300 group"
                     >
                         <div className="relative aspect-video w-full overflow-hidden">
-                            <ImageLoader
-                                src={img ? img : assets.project}
-                                alt={name}
-                                width={500}
-                                height={300}
-                                className="rounded-t-xl object-cover w-full h-full"
+                            <motion.div
+                                initial={{ scale: 1 }}
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <ImageLoader
+                                    src={img}
+                                    alt={name}
+                                    width={500}
+                                    height={300}
+                                    className="rounded-t-xl object-cover w-full h-full"
+                                />
+                            </motion.div>
+                            <motion.div 
+                                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                initial={{ opacity: 0 }}
+                                whileHover={{ opacity: 1 }}
                             />
                         </div>
 
                         <div className="p-5 flex-grow flex flex-col">
-                            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                            <motion.h2 
+                                className="text-xl font-bold text-gray-800 dark:text-white mb-3"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                            >
                                 {name}
-                            </h2>
+                            </motion.h2>
                             
-                            <div className="mt-auto pt-4">
+                            <motion.div 
+                                className="mt-auto pt-4"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                            >
                                 <a
                                     href={link}
                                     target="_blank"
@@ -78,7 +112,7 @@ export default function Projects() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </a>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.div>
                 ))}
