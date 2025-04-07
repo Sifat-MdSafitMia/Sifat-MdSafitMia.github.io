@@ -13,7 +13,7 @@ export default function Home() {
       className="h-screen w-full flex flex-col items-center justify-center">
 
       <Image src={assets.sifat} alt="Sifat" className="w-60 rounded-full drop-shadow-2xl" />
-      <h1 className="text-xl font-bold text-gray-500 pt-5" priority>Sifat - Md Safit Mia</h1>
+      <h1 className="text-xl font-bold text-gray-500 pt-5">Sifat - Md Safit Mia</h1>
       <TypewriterEffect />
 
       <div id="button" className="flex md:flex-row flex-col items-center gap-5 justify-between mt-5">

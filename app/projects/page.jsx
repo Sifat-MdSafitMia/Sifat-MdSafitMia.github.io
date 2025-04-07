@@ -1,42 +1,88 @@
-import Image from "next/image";
+'use client';
+
+import { motion } from "framer-motion";
 import { assets, porjectData } from "../assets/assets";
+import ImageLoader from "../components/ImageLoader";
 
 export default function Projects() {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } }
+    };
+
     return (
-        <div className="mt-30 mb-30 px-3 md:px-10 py-5 w-full flex flex-col items-center justify-center">
-            <h2 className="text-md">
-                Projects completed by me.
-            </h2>
-
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3 justify-center items-center mt-10">
-    {porjectData.map(({ name, img, link }, index) => (
-        <div
-            key={index}
-            className="relative flex flex-col pt-2 px-2 bg-gray-400 hover:bg-gray-800 duration-700 drop-shadow-2xl rounded-3xl border-[.5px] items-center justify-center text-gray-700 hover:text-amber-100 hover:-translate-y-1.5 hover:scale-125 z-10 hover:z-20"
-        >
-            <Image
-            src={img? img:assets.project}
-            alt={name}
-            width={300}
-            height={300}
-            className="rounded-2xl border-2 border-gray-500 drop-shadow-lg"
-            placeholder="blur" 
-            />  
-
-            <h2 className="text-lg font-semibold">
-                {name}
-            </h2>
-            <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="my-2 px-5 bg-amber-900 text-amber-100 hover:bg-amber-500 hover:text-amber-800 duration-300 rounded-2xl py-1 "
+        <div className="min-h-screen mt-20 mb-20 px-3 md:px-10 py-5 w-full flex flex-col items-center justify-center">
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-10"
             >
-                View
-            </a>
-        </div>
-    ))}
-</div>
+                <h1 className="text-3xl font-bold text-gray-800 mb-2">My Projects</h1>
+                <p className="text-gray-600 max-w-2xl">
+                    A collection of projects I've worked on, showcasing my skills and experience.
+                </p>
+            </motion.div>
+
+            <motion.div 
+                variants={container}
+                initial="hidden"
+                animate="show"
+                className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center items-stretch"
+            >
+                {porjectData.map(({ name, img, link }, index) => (
+                    <motion.div
+                        key={index}
+                        variants={item}
+                        whileHover={{ 
+                            y: -10,
+                            transition: { duration: 0.3 }
+                        }}
+                        className="relative flex flex-col h-full bg-white dark:bg-gray-700 shadow-lg hover:shadow-xl rounded-xl overflow-hidden border border-gray-200 dark:border-gray-600 transition-all duration-300"
+                    >
+                        <div className="relative aspect-video w-full overflow-hidden">
+                            <ImageLoader
+                                src={img ? img : assets.project}
+                                alt={name}
+                                width={500}
+                                height={300}
+                                className="rounded-t-xl object-cover w-full h-full"
+                            />
+                        </div>
+
+                        <div className="p-5 flex-grow flex flex-col">
+                            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                                {name}
+                            </h2>
+                            
+                            <div className="mt-auto pt-4">
+                                <a
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-blue-500/20"
+                                >
+                                    <span>View Project</span>
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
+                ))}
+            </motion.div>
         </div>
     );
 }

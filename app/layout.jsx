@@ -2,12 +2,13 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Head from "next/head";
+import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "700"], // Add the desired weights here
+  weight: ["400", "700"],
+  display: "swap", // Add display swap for better font loading performance
 });
 
 export const metadata = {
@@ -84,31 +85,48 @@ export const metadata = {
     'Cybersecurity Specialist Portfolio',
   ],
   author: "Sifat Sarkar",
+  metadataBase: new URL("https://sifat-mdsafitmia.github.io"),
+  openGraph: {
+    title: "Sifat - Cybersecurity Specialist",
+    description: "Personal portfolio website showcasing the skills and certifications of Sifat, a cybersecurity specialist, a penetration tester, a CTF player, a bug hunter, and a web developer.",
+    url: "https://sifat-mdsafitmia.github.io",
+    siteName: "Sifat's Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sifat - Cybersecurity Specialist",
+    description: "Personal portfolio website showcasing the skills and certifications of Sifat",
+    creator: "@sifat",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-
-      <Head>
-      <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XJ882KCPWK"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XJ882KCPWK');
-          `}
-        </script>
-      </Head>
+    <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} antialiased text-center`}>
         <Navbar />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
+      {/* Improved analytics script loading with next/script */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-XJ882KCPWK"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XJ882KCPWK');
+        `}
+      </Script>
     </html>
   );
 }

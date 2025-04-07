@@ -3,15 +3,30 @@
 :root {
   --background: #bad4d8;
   --foreground: #a32950;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
 }
 
+/* Base styling */
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-body{
+body {
   background-color: var(--background);
   color: var(--foreground);
+  font-display: optional;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
@@ -43,25 +58,95 @@ body::-webkit-scrollbar-thumb {
   background: #2563eb; 
 }
 
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Modern scrollbar - consolidated styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Glass effect - improved performance */
 .glassmorphism {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  will-change: transform;
 }
 
-/* Improve Swiper controls */
+/* Improve Swiper controls - simplified selector */
 .swiper-pagination-bullet {
   background-color: white !important;
   opacity: 0.7;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #4f46e5 !important; /* Primary color */
+  background-color: var(--accent-color) !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Helper classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Performance optimization */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

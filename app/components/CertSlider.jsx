@@ -7,7 +7,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import { assets } from "../assets/assets"; // Ensure correct import
+import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
 
 const images = [
   assets.css,
@@ -25,31 +26,43 @@ const images = [
   assets.pre_assesment,
   assets.sql_injection,
   assets.introduction_cip,
-  
 ];
 
 export default function CertSlider() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-600 rounded-lg px-5 py-5 my-5 ">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl px-5 py-8 my-5 shadow-xl"
+    >
+      {/* Title Indicator */}
+      <div className="flex items-center mb-8">
+        <div className="h-1 w-10 bg-red-500 rounded-full mr-3"></div>
+        <h3 className="text-gray-300 text-lg font-medium">Professional Certifications</h3>
+        <div className="h-1 w-10 bg-red-500 rounded-full ml-3"></div>
+      </div>
+      
       {/* Swiper Container */}
-      <div className="w-full md:w-3/4 p-2 md:p-5 m-5 md:m-8 rounded-2xl shadow-lg bg-gray-500">
+      <div className="w-full md:w-4/5 p-2 md:p-6 rounded-2xl shadow-[0_15px_50px_-15px_rgba(0,0,0,0.3)] backdrop-blur-sm bg-gradient-to-br from-gray-700/80 to-gray-800/80 border border-gray-700">
         <Swiper
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
           slidesPerView="auto"
           initialSlide={2}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           coverflowEffect={{
-            rotate: 10, 
-            stretch: 50, 
-            depth: 200,
+            rotate: 20, 
+            stretch: 0, 
+            depth: 250,
             modifier: 1, 
             slideShadows: true, 
           }}
           pagination={{
             el: ".swiper-pagination",
             clickable: true,
+            dynamicBullets: true,
           }}
           navigation={{
             nextEl: ".swiper-button-next",
@@ -61,35 +74,49 @@ export default function CertSlider() {
           {images.map((image, index) => (
             <SwiperSlide
               key={index}
-              className="relative w-[280px] md:w-[320px] rounded-2xl border-1 border-gray-200 overflow-hidden"
+              className="relative w-[280px] md:w-[320px] rounded-2xl overflow-hidden transform transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1"
             >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               <Image
                 src={image}
                 alt="Certification"
                 width={80}
                 height={80}
-                className="rounded-2xl w-full h-full object-cover"
-                quality={100} // Ensure high-quality images
-                priority={index < 3} // Prioritize loading the first few images
+                className="rounded-2xl w-full h-full object-cover ring-2 ring-gray-600 shadow-lg"
+                quality={100}
+                priority={index < 3 ? true : undefined}
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 translate-y-full hover:translate-y-0 transition-transform duration-300 z-20">
+                <p className="text-sm text-white font-medium">Certificate #{index + 1}</p>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Pagination */}
-        <div className="swiper-pagination !relative !mt-4"></div>
-
+        {/* Custom Navigation */}
+        <div className="flex justify-between items-center mt-6 px-4">
+          <div className="swiper-button-prev !static !w-10 !h-10 rounded-full bg-gray-700 flex items-center justify-center shadow-md hover:bg-gray-600 transition-colors duration-300 !text-white after:!text-sm"></div>
+          <div className="swiper-pagination !static !w-auto"></div>
+          <div className="swiper-button-next !static !w-10 !h-10 rounded-full bg-gray-700 flex items-center justify-center shadow-md hover:bg-gray-600 transition-colors duration-300 !text-white after:!text-sm"></div>
+        </div>
       </div>
 
       {/* View All Button */}
-      <div className="mt-8">
+      <motion.div 
+        className="mt-10"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
         <a
           href="/certifications"
-          className="font-semibold bg-red-500 text-white px-6 py-2 rounded-2xl border-[.5px] border-red-900 hover:bg-red-600 transition-all duration-300"
+          className="font-medium bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-3 rounded-full shadow-lg border border-red-600/30 hover:shadow-red-500/20 hover:from-red-600 hover:to-red-700 transition-all duration-300 flex items-center gap-2"
         >
-          View all
+          <span>View all certifications</span>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
