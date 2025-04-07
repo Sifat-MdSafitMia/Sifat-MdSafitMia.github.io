@@ -53,7 +53,8 @@ export default function Navbar() {
         { name: "Certifications", path: "/certifications" },
         { name: "Achievements", path: "/achievements" },
         { name: "Projects", path: "/projects" },
-        { name: "About", path: "/about" }
+        { name: "About", path: "/about" },
+        { name: "Contact", path: "/contact" },
     ];
 
     // Animation variants
