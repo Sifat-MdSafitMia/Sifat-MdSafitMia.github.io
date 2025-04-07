@@ -35,10 +35,10 @@ export default function Projects() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-center mb-10"
+                className="text-center  mb-10"
             >
-                <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">My Projects</h1>
-                <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
+                <h1 className="text-3xl font-bold text-black mb-2">My Projects</h1>
+                <p className="text-black/80 max-w-2xl">
                     A collection of projects showcasing my skills and expertise.
                 </p>
             </motion.div>

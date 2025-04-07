@@ -111,7 +111,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} antialiased text-center`}>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
       {/* Improved analytics script loading with next/script */}
