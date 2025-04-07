@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { projectsData } from "../assets/assets";
+import { porjectData, assets } from "../assets/assets";
 import ImageLoader from "../components/ImageLoader";
 
 export default function Projects() {
@@ -49,7 +49,7 @@ export default function Projects() {
                 animate="show"
                 className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center items-stretch"
             >
-                {projectsData.map(({ name, img, link }, index) => (
+                {porjectData.map(({ name, img, link }, index) => (
                     <motion.div
                         key={index}
                         variants={item}
@@ -71,7 +71,7 @@ export default function Projects() {
                                 transition={{ duration: 0.5 }}
                             >
                                 <ImageLoader
-                                    src={img}
+                                    src={img || assets.project}
                                     alt={name}
                                     width={500}
                                     height={300}
