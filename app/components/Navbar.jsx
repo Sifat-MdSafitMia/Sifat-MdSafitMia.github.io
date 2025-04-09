@@ -303,7 +303,7 @@ export default function Navbar() {
                                             variants={menuItemVariants}
                                         >
                                             <a 
-                                                href="https://github.com/sifat-8208" 
+                                                href="https://github.com/sifat-pr" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
                                                 className="text-gray-400 hover:text-white transition-colors"

@@ -27,7 +27,7 @@ export default function Footer() {
                     <a href="#" target="_blank">
 <Image src='/twitter-x.svg' className="rounded-sm duration-300 hover:border-b-1 border-gray-700" alt="X" width={25} height={25}/>
                     </a>
-                    <a href="https://github.com/sifat-8208" target="_blank">
+                    <a href="https://github.com/sifat-pr" target="_blank">
 <Image src='/github.svg' className="rounded-sm duration-300 hover:border-b-1 border-gray-700" alt="GitHub" width={25} height={25}/>
                     </a>
                     <a href="https://www.linkedin.com/in/sifat-pr/" target="_blank">

@@ -53,14 +53,14 @@ export const assets = {
 
 export const porjectData =[
     {name: "Responsive Portfolio Design (Fronted)", link: "https://sifat-sarkar.vercel.app", img: frontend_project},
-    {name: "Python Auto Message Send", link: "https://github.com/sifat-8208/PyAutoMSG", img: ""},
-    {name: "Python Number Guess Game", link: "https://github.com/sifat-8208/PyNumGuess", img: ""},
-    {name: "Python Currency Converter", link: "https://github.com/sifat-8208/CurrencyConvert", img: ""},
-    {name: "Python Image Downloader", link: "https://github.com/sifat-8208/PyImageDownloader", img: ""},
-    {name: "Rock, Paper, Scisser Game (Python)", link: "https://github.com/sifat-8208/RockPaper", img: ""},
-    {name: "Python Video Downloader", link: "https://github.com/sifat-8208/VideoDownloader", img: ""},
-    {name: "Python Snake Game", link: "https://github.com/sifat-8208/PySnakeGame", img: ""},
-    {name: "Python Digital Clock", link: "https://github.com/sifat-8208/PyDigitalClock", img: ""},
+    {name: "Python Auto Message Send", link: "https://github.com/sifat-pr/PyAutoMSG", img: ""},
+    {name: "Python Number Guess Game", link: "https://github.com/sifat-pr/PyNumGuess", img: ""},
+    {name: "Python Currency Converter", link: "https://github.com/sifat-pr/CurrencyConvert", img: ""},
+    {name: "Python Image Downloader", link: "https://github.com/sifat-pr/PyImageDownloader", img: ""},
+    {name: "Rock, Paper, Scisser Game (Python)", link: "https://github.com/sifat-pr/RockPaper", img: ""},
+    {name: "Python Video Downloader", link: "https://github.com/sifat-pr/VideoDownloader", img: ""},
+    {name: "Python Snake Game", link: "https://github.com/sifat-pr/PySnakeGame", img: ""},
+    {name: "Python Digital Clock", link: "https://github.com/sifat-pr/PyDigitalClock", img: ""},
 ]
 
 export const achievementsData = [

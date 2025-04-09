@@ -44,7 +44,7 @@ export default function Contact() {
             >Get in Touch</motion.h4>
 
                 <div className="flex gap-5 w-full items-center justify-center py-8">
-                    <a href="https://github.com/sifat-8208" target="_blank"><Image className="w-7 hover:scale-150 duration-300" alt="" src="/github-icon-1.svg" width={20} height={20}/></a>
+                    <a href="https://github.com/sifat-pr" target="_blank"><Image className="w-7 hover:scale-150 duration-300" alt="" src="/github-icon-1.svg" width={20} height={20}/></a>
                     <a href="https://www.facebook.com/sifat.3934" target="_blank"><Image className="w-7 hover:scale-150 duration-300" alt="" src='/facebook.svg' width={20} height={20}/></a>
                     <a href="https://www.instagram.com/sifat.3934/" target="_blank"><Image className="w-7 hover:scale-150 duration-300" alt="" src="/instagram.svg" width={20} height={20}/></a>
                     <a href="https://www.linkedin.com/in/sifat-sarkar-4044392b4/" target="_blank"><Image className="w-7 hover:scale-150 duration-300" alt="" src="/linkedin.svg" width={20} height={20}/></a>
